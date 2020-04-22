@@ -23,5 +23,8 @@ namespace Library
         {
             this.life = this.life - otherDamage;
             return $"El Enano {this.name} fue atacado, su vida ahora es {this.life}\n";
+        }
     }
 }
+
+
