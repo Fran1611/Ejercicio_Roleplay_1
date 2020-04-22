@@ -4,7 +4,6 @@ namespace Library
 {
     public class Elves
     {
-        private int initialHealt;
         private string name;
         private int life;
         private List<Item> items;
