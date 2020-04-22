@@ -21,6 +21,7 @@ namespace Library
         
         public string Name {get; set; }
         public int Life {get; set; }
+        public List<Item> items {get;set;}
         
         public string DwarvesAttack(int otherDamage)
         {
