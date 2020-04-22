@@ -6,7 +6,7 @@ namespace Library
     
     public class Item
     {
-        public static ArrayList itemsLista = new ArrayList();
+        ArrayList itemsLista = new ArrayList();
         private int daño, defensa, curar;
         private string nombre; 
 
