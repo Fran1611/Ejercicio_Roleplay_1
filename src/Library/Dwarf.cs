@@ -8,7 +8,7 @@ namespace Library
         private int life;
         private List<Item> items;
 
-        public Midget(string name, int life, List<Item> items ) 
+        public Dwarf(string name, int life, List<Item> items ) 
  
         {
             this.Items = items;
