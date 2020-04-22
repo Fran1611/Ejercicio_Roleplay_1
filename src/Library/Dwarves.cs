@@ -25,14 +25,14 @@ namespace Library
         
         public string DwarvesAttack(int otherDamage)
         {
-            this.life = this.life - otherDamage;
-            return $"El Enano {this.name} fue atacado, su vida ahora es {this.life}\n";
+            this.Life = this.Life - otherDamage;
+            return $"El Enano {this.Name} fue atacado, su vida ahora es {this.Life}\n";
         }
 
         public string DwarvesCure(int cure)
         {
-            this.life = this.life + cure;
-            return $"El Enano {this.Name} ha sido curado, su vida ahora es {this.life}";
+            this.Life = this.Life + cure;
+            return $"El Enano {this.Name} ha sido curado, su vida ahora es {this.Life}";
         }
     }
 }
