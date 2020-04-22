@@ -1,7 +1,7 @@
 using System;
 namespace Library
 {
-    public class Midget
+    public class Dwarf
     {
 
         private string name;
@@ -19,7 +19,7 @@ namespace Library
         public string Name {get; set; }
         public int Life {get; set; }
         
-        public string MidgetAttack(int otherDamage)
+        public string DwarfAttack(int otherDamage)
         {
             this.life = this.life - otherDamage;
             return $"El Enano {this.name} fue atacado, su vida ahora es {this.life}\n";
