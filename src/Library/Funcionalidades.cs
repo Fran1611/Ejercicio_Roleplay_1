@@ -15,7 +15,7 @@ namespace Library
         {
             object resultado = itemsLista.SingleOrDefault(item => item.Daño == description);
             a.Vida = a.Vida + resultado.Cura;
-            Console.WriteLine("{0} esta curando al personaje {1} ahora su vida es de {2}", a.Nombre, b,Nombre, a.Vida);
+            Console.WriteLine("{0} esta curando al personaje {1} ahora su vida es de {2}", a.Nombre, b.Nombre, a.Vida);
         }
         
     }
