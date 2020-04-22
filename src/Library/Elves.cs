@@ -20,7 +20,7 @@ namespace Library
         public int Life {get; set; }
         public List<Item> Items {get;set;}
         
-        public string ElfAttack(int otherDamage)
+        public string ElvesAttack(int otherDamage)
         {
             this.life = this.life - otherDamage;
             return $"El Elfo {this.name} fue atacado, su vida ahora es {this.life}\n";
