@@ -1,28 +1,35 @@
 ﻿using System;
-
+using System.Collections;
 namespace Library
 {
-    public class Mago
+    public class Personaje
     {
-        private string name;
-        private int life;
+        private string nombre;
+        private int vida;
+        private ArrayList items;
 
-        public Mago(string Nombre, BastonMagico baston, int vida)
+        public Personaje(string nombre, int vida, ArrayList items)
         {
             this.Vida = vida;
-            this.Nombre = Nombre;
+            this.Nombre = nombre;
         }
         public string Nombre {get;set;}
         public int Vida {get;set;}
 
-        public void Atacar()
+        public ArrayList Items {get;set;}
+
+        public void Atacar(Personaje PersonajeAtacado)
         {
-            
+            // hay que definirlo cuando tengamos la clase items
         }
 
-        public void TieneVida()
+        public string TieneVida(Personaje personaje)
         {
-
+            if(this.vida >0)
+            {
+                return $"el personaje {this.Nombre} tiene {this.Vida} de vida";
+            }
+            else return $"el personaje {this.Nombre} murió";
         }
     }
 }
