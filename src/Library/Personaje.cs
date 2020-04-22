@@ -16,5 +16,10 @@ namespace Library
         }
         public string Nombre {get; set; }
         public int Vida {get; set; }
+        
+        public static void AddItem(string nombre, int daño, int defensa, int curar)
+        {
+            itemsLista.Add(new Library.Item (nombre, daño, defensa, curar));
+        }
     }
 }
