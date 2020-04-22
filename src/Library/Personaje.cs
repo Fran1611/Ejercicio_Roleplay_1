@@ -21,5 +21,11 @@ namespace Library
         {
             itemsLista.Add(new Library.Item (nombre, daño, defensa, curar));
         }
+        
+        public virtual void RemoveItem(string name)
+        {
+            object obj = itemsLista.SingleOrDefault(item => item.Nombre == name);
+            itemsLista.Remove(obj);
+        }
     }
 }
