@@ -23,7 +23,7 @@ namespace Library
         public string ElvesAttack(int otherDamage)
         {
             this.life = this.life - otherDamage;
-            return $"El Elfo {this.name} fue atacado, su vida ahora es {this.life}\n";
+            return $"El Elfo {this.Name} fue atacado, su vida ahora es {this.life}\n";
         }
 
         public string ElvesCure(int cure)
