@@ -15,6 +15,7 @@ namespace Library
             this.Life = life;
             this.Name = name;
         }
+        
         public string Name {get; set; }
         public int Life {get; set; }
         
