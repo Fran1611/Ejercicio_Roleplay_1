@@ -1,4 +1,4 @@
-
+﻿
 ﻿using System;
 using Library;
 using System.Collections.Generic;
@@ -41,9 +41,8 @@ namespace Program
             Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack));
 
             Console.WriteLine(mago.WizardsCure(20));
-
+            Console.WriteLine(enano.DwarvesCure(20));
+            Console.WriteLine(elfo.ElvesCure(20));
         }
-
-
     }
 }
