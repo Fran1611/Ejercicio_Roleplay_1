@@ -4,6 +4,7 @@ namespace Library
 {
     public class Personaje
     {
+        ArrayList itemsLista = new ArrayList();
         private string nombre;
         private int vida;
 
