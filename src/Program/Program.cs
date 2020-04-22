@@ -7,13 +7,9 @@ namespace Program
        
         public static void Main(string[] args)
         {
-            Library.Personaje hp = new Library.Personaje("Harry Potter", 2);
-            Library.Personaje zz = new Library.Personaje("El mago de Oz",7);
-            
-            Library.Funciones.Ataque(hp,zz,"piedra");
-            Library.Lista.AddItem("piedra",7,0,0);
-            
-
+            Library.Wizard hp = new Library.Wizard("Harry Potter", 2);
+            Library.Wizard zz = new Library.Wizard("El mago de Oz",7);
+           
             Library.ConsolePrinter.TieneVida(hp);
             Library.ConsolePrinter.TieneVida(zz);
         }
