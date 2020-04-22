@@ -14,11 +14,6 @@ namespace Program
             Library.ConsolePrinter.TieneVida(zz);
             AddItem("piedra",7,0,0);
         }
-        
-         public static void AddItem(string nombre, int daño, int defensa, int curar)
-        {
-            itemsLista.Add(new Library.Item (nombre, daño, defensa, curar));
-        }
      
     }
 }
