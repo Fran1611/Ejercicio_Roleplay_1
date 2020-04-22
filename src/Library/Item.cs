@@ -2,6 +2,7 @@
 
 namespace Library
 {
+    
     public class Item
     {
 
@@ -13,8 +14,6 @@ namespace Library
         private int daño, defensa, curar;
         private string nombre; 
 
-        
-
         public Item (string nombre, int daño, int defensa, int curar)
 
         {
@@ -23,6 +22,7 @@ namespace Library
             this.Name = name;
             
         }
+
 
         public int Damage {get;set;}
         public int Defence {get;set;}
@@ -37,6 +37,12 @@ namespace Library
 
 
 
+
+
+        public string Nombre {get; set; }
+        public int Daño {get;set;}
+        public int Defensa {get;set;}
+        public int Curar {get;set;}
 
     }
 }
