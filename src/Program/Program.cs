@@ -1,4 +1,4 @@
-
+﻿
 ﻿using System;
 using Library;
 using System.Collections.Generic;
@@ -38,15 +38,9 @@ namespace Program
             Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack));
 
             Console.WriteLine(mago.WizardsCure(20));
-
-            Library.Wizard hp = new Library.Wizard("Harry Potter", 2);
-            Library.Wizard zz = new Library.Wizard("El mago de Oz",7);
-           
-            Library.ConsolePrinter.TieneVida(hp);
-            Library.ConsolePrinter.TieneVida(zz);
+            Console.WriteLine(enano.DwarvesCure(20));
+            Console.WriteLine(elfo.ElvesCure(20));
 
         }
-
-
     }
 }
