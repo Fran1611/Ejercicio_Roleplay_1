@@ -5,18 +5,22 @@ namespace Library
 {
     public class Funciones
     {
+        Lista lista = new Lista();
+
+        public void GetList()
+        {
+            List<Item> llamada = lista.GetList();
+        }
+        
         public static void Ataque(Personaje a, Personaje b, string description)
         {
-            object resultado = itemsList.Find(x => x.Nombre.Contains(description));
+            
+            object resultado = llamada.GetList().Find(x => x.Nombre.Contains(description));
             a.Vida = a.Vida - resultado.Daño;
-            Console.WriteLine("{0] ataca al personaje {1} ahora su vida es de {2}", a.Nombre, b.Nombre, a.Vida);
+            Console.WriteLine("{0} ataco a {1} y ahora la vida es de {2}",a.Nombre, b.Nombre, a.Vida);
         }
 
-        public static void Cura(Personaje a, Personaje b, string description)
-        {
-            object resultado = itemsList.Find(x => x.Nombre.Contains(description));
-            a.Vida = a.Vida + resultado.Cura;
-            Console.WriteLine("{0} esta curando al personaje {1} ahora su vida es de {2}", a.Nombre, b.Nombre, a.Vida);
-        }
+        
+
     }
 }
