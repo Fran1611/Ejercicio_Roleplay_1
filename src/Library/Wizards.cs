@@ -22,14 +22,14 @@ namespace Library
 
         public string WizardsAttack(int otherDamage)
         {
-            this.life = this.life - otherDamage;
-            return $"El Mago {this.name} fue atacado, su vida ahora es {this.life}\n";
+            this.Life = this.Life - otherDamage;
+            return $"El Mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
         }
 
         public string WizardsCure(int cure)
         {
-            this.life = this.life + cure;
-            return $"El Mago {this.Name} ha sido curado, su vida ahora es {this.life}";
+            this.Life = this.Life + cure;
+            return $"El Mago {this.Name} ha sido curado, su vida ahora es {this.Life}";
         }
     }
 }
