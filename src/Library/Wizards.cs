@@ -5,7 +5,7 @@ namespace Library
 {
     public class Wizards
 
-    {
+    {   private int initialHealt;
         private string name;
         private int life;
         private List<Item> items;
@@ -24,6 +24,12 @@ namespace Library
         {
             this.life = this.life - otherDamage;
             return $"El Mago {this.name} fue atacado, su vida ahora es {this.life}\n";
+        }
+
+        public string WizardsCure(int cure)
+        {
+            this.life = this.life + cure;
+            return $"El Mago {this.Name} ha sido curado, su vida ahora es {this.life}";
         }
     }
 }

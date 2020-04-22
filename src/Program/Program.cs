@@ -30,6 +30,8 @@ namespace Program
 
             // mejorar esto
             Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack));
+
+            Console.WriteLine(mago.WizardsCure(20));
         }
     }
 }
