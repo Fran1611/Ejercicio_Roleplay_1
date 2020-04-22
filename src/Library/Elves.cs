@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 namespace Library
 {
-    public class Elf
+    public class Elves
     {
 
         private string name;
         private int life;
         private List<Item> items;
         
-        public Elf(string name, int life, List<Item> items ) 
+        public Elves(string name, int life, List<Item> items ) 
  
         {
             this.Items = items;
