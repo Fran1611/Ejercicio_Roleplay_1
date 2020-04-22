@@ -19,7 +19,7 @@ namespace Library
         public string Name {get; set; }
         public int Life {get; set; }
 
-        public List<Item> items {get;set;}
+        public List<Item> Items {get;set;}
         
         public string ElvesAttack(int otherDamage)
         {
