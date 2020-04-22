@@ -5,7 +5,7 @@ namespace Library
 {
     public class Wizards
 
-    {   private int initialHealt;
+    {   
         private string name;
         private int life;
         private List<Item> items;
