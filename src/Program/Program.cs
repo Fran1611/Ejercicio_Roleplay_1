@@ -1,12 +1,18 @@
-﻿using System;
+using System;
+
 
 namespace Program
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+       
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Library.Personaje hp = new Library.Personaje("Harry Potter", 2);
+            Library.Personaje zz = new Library.Personaje("El mago de Oz",7);
+            Library.ConsolePrinter.TieneVida(hp);
+            Library.ConsolePrinter.TieneVida(zz);
         }
+     
     }
 }
