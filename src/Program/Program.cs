@@ -30,8 +30,8 @@ namespace Program
             Dwarves enano = new Dwarves("Enano",40,itemsEnano);
             Elves elfo = new Elves("Elfo",45,itemsElfo);
             
-            Wizards mago = new Wizards("Harry Potter",2,artMagia);
-            Wizards mago = new Wizards("Lord Voldemort",7,artMagia);
+            Wizards mago2 = new Wizards("Harry Potter",2,artMagia);
+            Wizards mago3 = new Wizards("Lord Voldemort",7,artMagia);
 
             string firstAttack = elfo.ElvesAttack(mago.Items[0].Damage);   
             string secondAttack = mago.WizardsAttack(enano.Items[0].Damage);
