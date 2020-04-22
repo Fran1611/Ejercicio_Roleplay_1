@@ -29,6 +29,9 @@ namespace Program
             Wizards mago = new Wizards("Mago", 60, artMagia);
             Dwarves enano = new Dwarves("Enano",40,itemsEnano);
             Elves elfo = new Elves("Elfo",45,itemsElfo);
+            
+            Wizards mago = new Wizards("Harry Potter",2,artMagia);
+            Wizards mago = new Wizards("Lord Voldemort",7,artMagia);
 
             string firstAttack = elfo.ElvesAttack(mago.Items[0].Damage);   
             string secondAttack = mago.WizardsAttack(enano.Items[0].Damage);
@@ -38,12 +41,6 @@ namespace Program
             Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack));
 
             Console.WriteLine(mago.WizardsCure(20));
-
-            Library.Wizard hp = new Library.Wizard("Harry Potter", 2);
-            Library.Wizard zz = new Library.Wizard("El mago de Oz",7);
-           
-            Library.ConsolePrinter.TieneVida(hp);
-            Library.ConsolePrinter.TieneVida(zz);
 
         }
 
