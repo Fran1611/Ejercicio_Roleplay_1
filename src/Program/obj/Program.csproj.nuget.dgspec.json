@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\Program.csproj": {}
+    "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\Program.csproj": {}
   },
   "projects": {
-    "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj": {
+    "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
+        "projectPath": "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\obj\\",
+        "outputPath": "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\Program.csproj": {
+    "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\Program.csproj",
+        "projectUniqueName": "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\Program.csproj",
+        "projectPath": "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\Program.csproj",
         "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\obj\\",
+        "outputPath": "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Program\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -88,8 +88,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj": {
-                "projectPath": "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj"
+              "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj": {
+                "projectPath": "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj"
               }
             }
           }

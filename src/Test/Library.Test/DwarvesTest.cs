@@ -13,12 +13,12 @@ namespace Library.Test
         // Test que comprueba que el ataque al Mago se realiza correctamente.
         public void DwarvesAttackTest()
         {
-            Item garrote = new Item("Garrote",26,0);
+            Item garrote = new Item("Garrote",26,0,null);
             List<Item> armasElfo = new List<Item>();
             armasElfo.Add(garrote);
             Dwarves elfo = new Dwarves("Elfo de un ojo", 35, armasElfo);
 
-            Item paloMagico = new Item("Palo Magico",33,0);
+            Item paloMagico = new Item("Palo Magico",33,0,null);
             List<Item> armasMago = new List<Item>();
             armasMago.Add(paloMagico);
             Wizards mago = new Wizards("Mago Negro",56,armasMago);

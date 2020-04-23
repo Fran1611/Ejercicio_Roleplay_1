@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aKdz4IEnuSSb7Y0+m1Rp2YXySRTFHfRUi7JcrK/L4mBmfFpCUj+lykVFBEE3NDk3GQBcbZSs4gc6BreOEeF7mQ==",
+  "dgSpecHash": "76zk7LrEZ75Y2DZLAKrU4nn+cLh7h3fu3/DVQnGuwDmcU7szXtsusVbfzvaxq5DR+WkPkfKKv103fTDUOqmKtQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
+  "projectFilePath": "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
