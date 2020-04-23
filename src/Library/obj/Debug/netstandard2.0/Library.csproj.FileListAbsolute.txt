@@ -7,3 +7,12 @@ C:\Users\FIT\Desktop\Ejercicio_Roleplay_1\src\Library\bin\Debug\netstandard2.0\L
 C:\Users\FIT\Desktop\Ejercicio_Roleplay_1\src\Library\bin\Debug\netstandard2.0\Library.pdb
 C:\Users\FIT\Desktop\Ejercicio_Roleplay_1\src\Library\obj\Debug\netstandard2.0\Library.dll
 C:\Users\FIT\Desktop\Ejercicio_Roleplay_1\src\Library\obj\Debug\netstandard2.0\Library.pdb
+C:\Users\agust\OneDrive\Documents\GitHub\Ejercicio_Roleplay_1\src\Library\obj\Debug\netstandard2.0\Library.csprojAssemblyReference.cache
+C:\Users\agust\OneDrive\Documents\GitHub\Ejercicio_Roleplay_1\src\Library\obj\Debug\netstandard2.0\Library.csproj.CoreCompileInputs.cache
+C:\Users\agust\OneDrive\Documents\GitHub\Ejercicio_Roleplay_1\src\Library\obj\Debug\netstandard2.0\Library.AssemblyInfoInputs.cache
+C:\Users\agust\OneDrive\Documents\GitHub\Ejercicio_Roleplay_1\src\Library\obj\Debug\netstandard2.0\Library.AssemblyInfo.cs
+C:\Users\agust\OneDrive\Documents\GitHub\Ejercicio_Roleplay_1\src\Library\obj\Debug\netstandard2.0\Library.dll
+C:\Users\agust\OneDrive\Documents\GitHub\Ejercicio_Roleplay_1\src\Library\obj\Debug\netstandard2.0\Library.pdb
+C:\Users\agust\OneDrive\Documents\GitHub\Ejercicio_Roleplay_1\src\Library\bin\Debug\netstandard2.0\Library.deps.json
+C:\Users\agust\OneDrive\Documents\GitHub\Ejercicio_Roleplay_1\src\Library\bin\Debug\netstandard2.0\Library.dll
+C:\Users\agust\OneDrive\Documents\GitHub\Ejercicio_Roleplay_1\src\Library\bin\Debug\netstandard2.0\Library.pdb
