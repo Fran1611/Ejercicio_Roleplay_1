@@ -12,6 +12,7 @@ namespace Program
         public static void Main(string[] args)
         {
 
+
             Item espada = new Item("Espada",20,0,null);
             Item baston = new Item("Baston",25,10,null);
             Item garrote = new Item("Garrote",35,0,null);
@@ -21,6 +22,7 @@ namespace Program
 
             Item excalibur = new Item("Excalibur",80,0,null);
             Item gwaihir = new Item("Gwaihir",70,60,null);
+
 
             List<Item> artMagia = new List<Item>();
             List<Item> itemsElfo = new List<Item>();
