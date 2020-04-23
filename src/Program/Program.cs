@@ -16,8 +16,8 @@ namespace Program
             Item baston = new Item("Baston",25,10);
             Item garrote = new Item("Garrote",35,0);
             
-            Idem capa = new Idem("Capa de la invisibilidad", 0, 100);
-            Idem varita = new Idem("Varita", 100, 45);
+            Item capa = new Item("Capa de la invisibilidad", 0, 100);
+            Item varita = new Item("Varita", 100, 45);
 
             Item excalibur = new Item("Excalibur",80,0);
             Item gwaihir = new Item("Gwaihir",70,60);
@@ -52,7 +52,7 @@ namespace Program
 
             string forthAttack = Gandalf.WizardsAttack(elfo.Items[1].Damage);
             
-            string fifthAttack = hp.WizardAttack(lv.Idems[2].Damage);
+            string fifthAttack = hp.WizardsAttack(lv.Items[2].Damage);
 
             // mejorar esto
             Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack)+(forthAttack)+(fifthAttack));
