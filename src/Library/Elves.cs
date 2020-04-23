@@ -27,7 +27,7 @@ namespace Library
         
         public string ElvesAttack(int otherDamage)
         {
-            this.Life = this.Life + this.Item[0].Defense - otherDamage;
+            this.Life = this.Life + this.Items[0].Defence - otherDamage;
             return $"El Elfo {this.Name} fue atacado, su vida ahora es {this.Life}\n";
         }
         
