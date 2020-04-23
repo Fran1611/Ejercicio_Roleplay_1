@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rv9kv0UiNLZSKPjBoxOj9hrS4gpav66hgmQu5yCBIrc/DjuN7sVr8YCu0rFGt5fhf0Gvd4k97TT871bJJBYQVw==",
+  "dgSpecHash": "hbRO8gBXIQvFNHIOpECNprU/0pqh2id4oBGqtiEIbTdafgNtg11HVmCNWqmgSSzDcctcerTRG56MZegVy7sanQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Test\\Library.Test\\Library.Test.csproj",
+  "projectFilePath": "c:\\Users\\FIT\\Desktop\\Ejercicio_Roleplay_1\\src\\Test\\Library.Test\\Library.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FIT\\.nuget\\packages\\microsoft.codecoverage\\16.4.0\\microsoft.codecoverage.16.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
