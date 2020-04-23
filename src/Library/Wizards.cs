@@ -19,12 +19,20 @@ namespace Library
         public string Name {get;set;}
         public int Life {get;set;}
         public List<Item> Items {get;set;}
+        
+        //El metodo Ataque, usa un numero que se refiere al daño que un personaje le causa a otro. Este numero se encuentra en una lista
+        //de objetos de clase Item, se accede al objeto y se busca el atributo correspondiente al metodo, en este caso Daño.
+        //Al calculo de la nueva vida luego de un ataque se le debe sumar la posible defensa que el objeto pueda estar usando. Tambien
+        //accediendo al objeto de la lista. Retornara una actualizacion de la nueva vida.
 
-        public string WizardsAttack(int otherDamage , int otherDefense)
+        public string WizardsAttack(int otherDamage)
         {
-            this.Life = this.Life + otherDefense - otherDamage;
+            this.Life = this.Life + this.Item[0].Defense - otherDamage;
             return $"El Mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
         }
+        
+        //El metodo curacion funciona muy parecido a Ataque solo que en este caso buscamos que la curacion se sume a la vida del obbjeto.
+        //Retorna una actualizacion de la vida del personaje.
 
         public string WizardsCure(int cure)
         {
