@@ -7,18 +7,18 @@ namespace Library
         private string name;
         private int life;
         private List<Item> items;
-        
-        public Elves(string name, int life, List<Item> items ) 
- 
+
+        public Elves(string name, int life, List<Item> items)
+
         {
             this.Items = items;
             this.Life = life;
             this.Name = name;
         }
-        public string Name {get; set; }
-        public int Life {get; set; }
+        public string Name { get; set; }
+        public int Life { get; set; }
 
-        public List<Item> Items {get;set;}
+        public List<Item> Items { get; set; }
         
         //El metodo ataque recibe un numero que corresponde al daño que un personaje le da a otro. Este numero se obtiene de una lista
         //de objetos de clase Item, se accede a un objeto y se busca su atributo en este caso Daño.
@@ -29,6 +29,7 @@ namespace Library
         {
             this.Life = this.Life + this.Items[0].Defence - otherDamage;
             return $"El Elfo {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+
         }
         
         //En cuanto al metodo de curacion, este funciona muy parecido a Ataque solo que recibe un número de cuarcion. 
@@ -36,8 +37,27 @@ namespace Library
 
         public string ElvesCure(int cure)
         {
-            this.Life = this.Life + cure;
-            return $"El Elfo {this.Name} ha sido curado, su vida ahora es {this.Life}";
+            if (cure < 0)
+            {
+                return $"La cura no puede ser negativa";
+            }
+
+            if (this.Life <= 0)
+            {
+                return $"El Elfo ya está muerto, no se puede curar\n";
+            }
+            else
+            {
+                this.Life = this.Life + cure;
+                if (this.Life >= 100)
+                {
+                    return $"El Elfo {this.Name} ya está totalmente curado";
+                }
+                else
+                {
+                    return $"El Elfo {this.Name} ha sido curado, su vida ahora es {this.Life}";
+                }
+            }
         }
     }
 }
