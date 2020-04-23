@@ -11,7 +11,7 @@ namespace Library.Test
 
         [Test]
         // Test que comprueba que el ataque al Mago se realiza correctamente.
-        public void DwarvesAttackTest()
+        public void DwarvesAttack_Damage_UpdatedLife()
         {
             Item garrote = new Item("Garrote",26,0,null);
             List<Item> armasElfo = new List<Item>();
