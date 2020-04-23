@@ -27,8 +27,19 @@ namespace Library
 
         public string WizardsAttack(int otherDamage)
         {
-            this.Life = this.Life + this.Items[0].Defence - otherDamage;
-            return $"El Mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+           if (otherDamage < 0)
+            {
+                return $"El Daño no puede ser negativo\n";
+            }
+             this.Life = this.Life - otherDamage;
+            if (this.Life <= 0)
+            {
+                return $"El Mago {this.Name} fue atacado y ahora está muerto\n";
+            }
+            else
+            {
+                return $"El Mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+            }
         }
         
         //El metodo curacion funciona muy parecido a Ataque solo que en este caso buscamos que la curacion se sume a la vida del obbjeto.
@@ -36,8 +47,27 @@ namespace Library
 
         public string WizardsCure(int cure)
         {
-            this.Life = this.Life + cure;
-            return $"El Mago {this.Name} ha sido curado, su vida ahora es {this.Life}";
+           if (cure < 0)
+            {
+                return $"La cura no puede ser negativa\n";
+            }
+
+            if (this.Life <= 0)
+            {
+                return $"El Mago ya está muerto, no se puede curar\n";
+            }
+            else
+            {
+                this.Life = this.Life + cure;
+                if (this.Life >= 100)
+                {
+                    return $"El Mago {this.Name} ya está totalmente curado\n";
+                }
+                else
+                {
+                    return $"El Mago {this.Name} ha sido curado, su vida ahora es {this.Life}\n";
+                }
+            }
         }
     }
 }

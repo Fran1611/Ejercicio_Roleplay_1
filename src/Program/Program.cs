@@ -12,7 +12,7 @@ namespace Program
         public static void Main(string[] args)
         {
 
-            Item espada = new Item("Espada",20,0);
+            Item espada = new Item("Espada",120,0);
             Item baston = new Item("Baston",25,10);
             Item garrote = new Item("Garrote",35,0);
             

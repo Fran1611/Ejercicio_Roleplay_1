@@ -27,8 +27,20 @@ namespace Library
         
         public string ElvesAttack(int otherDamage)
         {
-            this.Life = this.Life + this.Items[0].Defence - otherDamage;
-            return $"El Elfo {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+            if (otherDamage < 0)
+            {
+                return $"El Daño no puede ser negativo\n";
+            }
+
+            this.Life = this.Life - otherDamage;
+            if (this.Life <= 0)
+            {
+                return $"El Elfo {this.Name} fue atacado y ahora está muerto\n";
+            }
+            else
+            {
+                return $"El Elfo {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+            }
         }
         
         //En cuanto al metodo de curacion, este funciona muy parecido a Ataque solo que recibe un número de cuarcion. 
@@ -36,8 +48,27 @@ namespace Library
 
         public string ElvesCure(int cure)
         {
-            this.Life = this.Life + cure;
-            return $"El Elfo {this.Name} ha sido curado, su vida ahora es {this.Life}";
+             if (cure < 0)
+            {
+                return $"La cura no puede ser negativa";
+            }
+
+            if (this.Life <= 0)
+            {
+                return $"El Elfo ya está muerto, no se puede curar\n";
+            }
+            else
+            {
+                this.Life = this.Life + cure;
+                if (this.Life >= 100)
+                {
+                    return $"El Elfo {this.Name} ya está totalmente curado";
+                }
+                else
+                {
+                    return $"El Elfo {this.Name} ha sido curado, su vida ahora es {this.Life}";
+                }
+            }
         }
     }
 }
