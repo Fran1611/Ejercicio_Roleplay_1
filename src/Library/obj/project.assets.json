@@ -179,19 +179,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\agust\\.nuget\\packages\\": {}
+    "C:\\Users\\Alejandro\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\agust\\OneDrive\\Documents\\GitHub\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
+      "projectUniqueName": "C:\\Users\\Alejandro\\Desktop\\P2\\Proyectos\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\agust\\OneDrive\\Documents\\GitHub\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
-      "packagesPath": "C:\\Users\\agust\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\agust\\OneDrive\\Documents\\GitHub\\Ejercicio_Roleplay_1\\src\\Library\\obj\\",
+      "projectPath": "C:\\Users\\Alejandro\\Desktop\\P2\\Proyectos\\Ejercicio_Roleplay_1\\src\\Library\\Library.csproj",
+      "packagesPath": "C:\\Users\\Alejandro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alejandro\\Desktop\\P2\\Proyectos\\Ejercicio_Roleplay_1\\src\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\agust\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alejandro\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -230,7 +230,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
