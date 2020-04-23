@@ -37,11 +37,11 @@ namespace Program
 
             Wizards Gandalf = new Wizards("Gandalf", 100, artMagia);
 
-            string firstAttack = elfo.ElvesAttack(mago.Items[0].Damage,elfo.Items[0].Defence);   
-            string secondAttack = mago.WizardsAttack(enano.Items[0].Damage,mago.Items[0].Defence);
-            string thirdAttack = enano.DwarvesAttack(elfo.Items[0].Damage,enano.Items[0].Defence);
+            string firstAttack = elfo.ElvesAttack(mago.Items[0].Damage);   
+            string secondAttack = mago.WizardsAttack(enano.Items[0].Damage);
+            string thirdAttack = enano.DwarvesAttack(elfo.Items[0].Damage);
 
-            string forthAttack = Gandalf.WizardsAttack(elfo.Items[1].Damage,mago.Items[1].Defence);
+            string forthAttack = Gandalf.WizardsAttack(elfo.Items[1].Damage);
 
             // mejorar esto
             Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack)+(forthAttack));
