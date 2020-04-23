@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 namespace Library.Test
 {
-    public class Tests
+    public class DwarvesTest
     {
         [SetUp]
         public void Setup()
