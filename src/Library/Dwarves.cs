@@ -30,7 +30,7 @@ namespace Library
         
         public string DwarvesAttack(int otherDamage)
         {
-            this.Life = this.Life + this.Item[0].Defence - otherDamage;
+            this.Life = this.Life + this.Items[0].Defence - otherDamage;
             return $"El Enano {this.Name} fue atacado, su vida ahora es {this.Life}\n";
         }
         
