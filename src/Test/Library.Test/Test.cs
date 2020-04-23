@@ -13,7 +13,7 @@ namespace Library.Test
         [Test]
 
         // Probamos solo los metodos de la clase mago porque estrucutralmente son los mismos que los demas personajes, y hacen lo mismo.
-        
+
         public void DwarvesAttack_Damage_UpdatedLife()
         {
             Item garrote = new Item("Garrote",26,0,null);
@@ -44,7 +44,7 @@ namespace Library.Test
             armasMago.Add(paloMagico);
             Wizards mago = new Wizards("Mago Negro",56,armasMago);
             string heal = mago.WizardsCure(20);   
-            string expected = "El Mago Mago Negro ha sido curado, su vida ahora es 76";
+            string expected = "El Mago Mago Negro ha sido curado, su vida ahora es 76\n";
 
             Assert.AreEqual(expected, heal);
         }
