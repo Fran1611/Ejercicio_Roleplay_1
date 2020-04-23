@@ -11,7 +11,9 @@ namespace Library.Test
         }
 
         [Test]
+
         // Probamos solo los metodos de la clase mago porque estrucutralmente son los mismos que los demas personajes, y hacen lo mismo.
+        
         public void DwarvesAttack_Damage_UpdatedLife()
         {
             Item garrote = new Item("Garrote",26,0,null);
