@@ -34,9 +34,9 @@ namespace Library
             return $"El Enano {this.Name} fue atacado, su vida ahora es {this.Life}\n";
         }
         
-        //En cuanto al metodo de curacion, es muy parecido a el de Ataque ya que accede a un valor int de una lista de objetos Item 
-        //buscando el atributo que corresponde a la curacion.
+        //En cuanto al metodo de curacion, es muy parecido a el de Ataque pero recibe un número que corresponde a la curación. 
         //Luego se calcula la vida del personaje luego de ser curado y retorna una actualizacion de su nueva vida.
+
 
         public string DwarvesCure(int cure)
         {

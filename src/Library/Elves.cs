@@ -31,8 +31,8 @@ namespace Library
             return $"El Elfo {this.Name} fue atacado, su vida ahora es {this.Life}\n";
         }
         
-        //En cuanto al metodo de curacion, este funciona muy parecido a Ataque solo que buscamos unn atributo de curacion en la lista
-        //de objetos, para luego sumarlo a su vida. Retornara una actualizacion de la vida del personaje.
+        //En cuanto al metodo de curacion, este funciona muy parecido a Ataque solo que recibe un número de cuarcion. 
+        //para luego sumarlo a su vida. Retornara una actualizacion de la vida del personaje.
 
         public string ElvesCure(int cure)
         {
