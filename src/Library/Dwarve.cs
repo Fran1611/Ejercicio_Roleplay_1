@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections;
 namespace Library
 {
+// Por patron EXPERT asignamos las responsabilidades del Ataque y Cura del personaje Dwarve, ya que este es experto en conocer su valor de vida.
     public class Dwarve
     {
         private int life;   
