@@ -38,8 +38,8 @@ namespace Program
 
 
             Wizard mago = new Wizard("Mago", 60, artMagia);
-            Dwarve enano = new Dwarve("Enano",40,itemsEnano);
-            Elve elfo = new Elve("Elfo",45,itemsElfo);
+            Dwarf enano = new Dwarf("Enano",40,itemsEnano);
+            Elf elfo = new Elf("Elfo",45,itemsElfo);
 
             Wizard Gandalf = new Wizard("Gandalf", 100, artMagia);
             
@@ -47,31 +47,16 @@ namespace Program
             Wizard lv = new Wizard("Lord Voldemort", 7, artMagia);
 
 
-            // CAMBIAR PARA CADA ATAQUE Y RESTAURACION DE VIDA 
+            ConsolePrinter print = new ConsolePrinter();
+            print.AfterAttack(elfo.ElfAttack(mago.Items[0].Damage));
+            print.AfterAttack(mago.WizardAttack(enano.Items[0].Damage));
+            print.AfterAttack(enano.DwarfAttack(elfo.Items[0].Damage));
+            print.AfterAttack(Gandalf.WizardAttack(elfo.Items[1].Damage));
+            print.AfterAttack(hp.WizardAttack(lv.Items[2].Damage));
             
-            // QUEDARIA ASI ImprimirAtaque(elfo.ElveAttack(Mago.Items[0].Damage));
-
-            // ImprimirCura (elfo.ElveCure());
-
-            // ESTO SE VA
-            /*string firstAttack = elfo.ElveAttack(mago.Items[0].Damage);   
-            string secondAttack = mago.WizardAttack(enano.Items[0].Damage);
-            string thirdAttack = enano.DwarveAttack(elfo.Items[0].Damage);
-
-
-            string forthAttack = Gandalf.WizardAttack(elfo.Items[1].Damage);
+            print.AfterCure(elfo.ElfCure());
             
-            string fifthAttack = hp.WizardAttack(lv.Items[2].Damage);
-
-            // mejorar esto
-            Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack)+(forthAttack)+(fifthAttack));
-
-            Console.WriteLine(mago.WizardCure());
-            Console.WriteLine(enano.DwarveCure());
-            Console.WriteLine(elfo.ElveCure());
-            Console.WriteLine(Gandalf.WizardCure());
-            Console.WriteLine(hp.WizardCure());*/
-
+            
         }
     }
 }
