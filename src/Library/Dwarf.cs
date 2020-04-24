@@ -45,7 +45,7 @@ namespace Library
         }
         
         // El metodo DwarvesCure restaura la vida del Elve a su vida inicial, retorna nombre y vida para imprimir.
-        public ArrayList DwarfeCure()
+        public ArrayList DwarfCure()
         {
             ArrayList result = new ArrayList();
             this.Life = InitialLife;
