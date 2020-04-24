@@ -3,21 +3,17 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Wizards
-
+    public class Wizard
     {
-        private string name;
-        private int life;
-        private List<Item> items;
 
-        public Wizards(string name, int life, List<Item> items)
+        public Wizard(string name, int life, List<Item> items)
         {
             this.Items = items;
-            this.Life = ValidarVida(life);
+            this.Life = ValidateLife(life);
             this.Name = name;
         }
 
-        public int ValidarVida(int life)
+        public int ValidateLife(int life)
         {
             if (life < 1)
             {   
@@ -44,39 +40,33 @@ namespace Library
         //Al calculo de la nueva vida luego de un ataque se le debe sumar la posible defensa que el objeto pueda estar usando. Tambien
         //accediendo al objeto de la lista. Retornara una actualizacion de la nueva vida.
 
-        public string WizardsAttack(int otherDamage)
+        public string WizardAttack(int otherDamage)
         {
 
             this.Life = this.Life + this.Items[0].Defence - otherDamage;
 
             if (this.Life <= 0)
             {
-                return $"El mago {this.Name} está muerto\n";
+                return $"El mago {this.Name} fue atacado y ahora está muerto\n";
             }
-
-            return $"El mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
 
             if (otherDamage < 0)
             {
-                return $"El Daño no puede ser negativo\n";
+                return $"El daño no puede ser negativo\n";
             }
-             this.Life = this.Life - otherDamage;
-            if (this.Life <= 0)
-            {
-                return $"El Mago {this.Name} fue atacado y ahora está muerto\n";
-            }
+            
             else
             {
-                return $"El Mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+                return $"El mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
             }
 
 
         }
         
-        //El metodo curacion funciona muy parecido a Ataque solo que en este caso buscamos que la curacion se sume a la vida del obbjeto.
+        //El metodo curacion funciona muy parecido a Ataque solo que en este caso buscamos que la curacion se sume a la vida del objeto.
         //Retorna una actualizacion de la vida del personaje.
 
-        public string WizardsCure(int cure)
+        public string WizardCure(int cure)
         {
             if (cure < 0)
             {   

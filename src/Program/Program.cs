@@ -39,34 +39,32 @@ namespace Program
             artMagia.Add(gwaihir);
 
 
-            Wizards mago = new Wizards("Mago", 60, artMagia);
-            Dwarves enano = new Dwarves("Enano",40,itemsEnano);
-            Elves elfo = new Elves("Elfo",45,itemsElfo);
+            Wizard mago = new Wizard("Mago", 60, artMagia);
+            Dwarf enano = new Dwarf("Enano",40,itemsEnano);
+            Elf elfo = new Elf("Elfo",45,itemsElfo);
 
-            Wizards Gandalf = new Wizards("Gandalf", 100, artMagia);
+            Wizard Gandalf = new Wizard("Gandalf", 100, artMagia);
             
-            Wizards hp = new Wizards("Harry Potter", 2, artMagia);
-            Wizards lv = new Wizards("Lord Voldemort", 7, artMagia);
+            Wizard hp = new Wizard("Harry Potter", 2, artMagia);
+            Wizard lv = new Wizard("Lord Voldemort", 7, artMagia);
 
-            //string firstAttack = elfo.ElvesAttack(mago.Items[0].Damage);   
-            //string secondAttack = mago.WizardsAttack(enano.Items[0].Damage);
-            //string thirdAttack = enano.DwarvesAttack(elfo.Items[0].Damage);
+            string firstAttack = elfo.ElfAttack(mago.Items[0].Damage);   
+            string secondAttack = mago.WizardAttack(enano.Items[0].Damage);
+            string thirdAttack = enano.DwarfAttack(elfo.Items[0].Damage);
 
-            string forthAttack = Gandalf.WizardsAttack(elfo.Items[1].Damage);
+            string forthAttack = Gandalf.WizardAttack(elfo.Items[1].Damage);
             
-            //string fifthAttack = hp.WizardsAttack(lv.Items[2].Damage);
+            string fifthAttack = hp.WizardAttack(lv.Items[2].Damage);
 
             // mejorar esto
-            //Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack)+(forthAttack)+(fifthAttack));
-            Console.WriteLine(forthAttack);
-            Console.WriteLine(Gandalf.WizardsCure(50));
-            /*
-            Console.WriteLine(mago.WizardsCure(20));
-            Console.WriteLine(enano.DwarvesCure(20));
-            Console.WriteLine(elfo.ElvesCure(20));
-            Console.WriteLine(Gandalf.WizardsCure(90));
-            Console.WriteLine(hp.WizardsCure(20));
-            */
+            Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack)+(forthAttack)+(fifthAttack));
+            
+            Console.WriteLine(mago.WizardCure(20));
+            Console.WriteLine(enano.DwarfCure(20));
+            Console.WriteLine(elfo.ElfCure(20));
+            Console.WriteLine(Gandalf.WizardCure(90));
+            Console.WriteLine(hp.WizardCure(20));
+            
         }
     }
 }
