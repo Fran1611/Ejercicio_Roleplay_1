@@ -6,20 +6,32 @@ namespace Library
     public class Wizards
 
     {
-        private string name;
+
         private int life;
-        private List<Item> items;
 
         public Wizards(string name, int life, List<Item> items)
         {
             this.Items = items;
             this.Life = life;
             this.Name = name;
+            InitialLife = life;
         }
 
         public string Name {get;set;}
-        public int Life {get;set;}
+        public int Life 
+        {
+            get{return life;}
+            set
+            {
+                if(life < 0)
+                {
+                    life = 0;
+                }
+                else life = value;
+            }
+        }
         public List<Item> Items {get;set;}
+        public int InitialLife {get;}
         
         //El metodo Ataque, usa un numero que se refiere al daño que un personaje le causa a otro. Este numero se encuentra en una lista
         //de objetos de clase Item, se accede al objeto y se busca el atributo correspondiente al metodo, en este caso Daño.
@@ -28,50 +40,19 @@ namespace Library
 
         public string WizardsAttack(int otherDamage)
         {
-            if (otherDamage < 0)
-            {
-                return $"El Daño no puede ser negativo\n";
-            }
-             this.Life = this.Life - otherDamage;
             if (this.Life <= 0)
             {
                 return $"El Mago {this.Name} fue atacado y ahora está muerto\n";
             }
-            else
-            {
-                return $"El Mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
-            }
-
+            else return $"El Mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
         }
         
-        //El metodo curacion funciona muy parecido a Ataque solo que en este caso buscamos que la curacion se sume a la vida del obbjeto.
-        //Retorna una actualizacion de la vida del personaje.
-
-        public string WizardsCure(int cure)
+        // El metodo WizardsCure restaura la vida del Elve a su vida inicial.
+        public string WizardsCure()
         {
-            if (cure < 0)
-            {
-                return $"La cura no puede ser negativa\n";
-            }
-
-            if (this.Life <= 0)
-            {
-                return $"El Mago ya está muerto, no se puede curar\n";
-            }
-            else
-            {
-                this.Life = this.Life + cure;
-                if (this.Life >= 100)
-                {
-                    return $"El Mago {this.Name} ya está totalmente curado\n";
-                }
-                else
-                {
-                    return $"El Mago {this.Name} ha sido curado, su vida ahora es {this.Life}\n";
-                }
-            }
-
-
+            this.Life = InitialLife;
+            return $"El Mago ha sido curado, si vida es {this.Life}";
         }
+        
     }
 }

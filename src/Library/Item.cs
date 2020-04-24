@@ -9,7 +9,7 @@ namespace Library
 
         private int damage;
         private int defence; 
-        private string name;
+        //private string name;
         private List<string> spells;
 
         public Item (string name, int damage, int defence, List<string> spells)
@@ -19,9 +19,34 @@ namespace Library
             this.Name = name;
             this.Spells = spells;
         }
-        public int Damage {get;set;}
-        public int Defence {get;set;}
+
         public string Name {get;set;}
+        public int Damage 
+        {
+            get{return damage;}
+        
+            set
+            {   // El daño no puede ser negativo.
+                if(damage < 0)
+                {
+                    damage = 0;
+                } else damage = value;
+            }
+        }
+
+        public int Defence 
+        {
+            get{return defence;}
+            
+            set
+            {   // La defensa no puede ser negativa.
+                if (defence < 0)
+                {
+                    defence = 0;
+                }else defence = value;
+            }
+        }
+
         public List<string> Spells 
         {
             get
@@ -30,7 +55,7 @@ namespace Library
             }
 
             set
-            {
+            {   // Los Hechizos solo pueden estar en un Lirbo de Hechizos.
                 if (this.Name == "Libro de Hechizos")
                 {
                     spells = value;

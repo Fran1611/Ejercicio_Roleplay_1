@@ -13,8 +13,8 @@ namespace Program
         {
 
 
-            Item espada = new Item("Espada",20,0,null);
-            Item baston = new Item("Baston",25,10,null);
+            Item espada = new Item("Espada",45,0,null);
+            Item baston = new Item("Baston",50,10,null);
             Item garrote = new Item("Garrote",35,0,null);
             
             Item capa = new Item("Capa de la invisibilidad", 0, 100,null);
@@ -58,11 +58,11 @@ namespace Program
 
             // mejorar esto
             Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack)+(forthAttack)+(fifthAttack));
-            Console.WriteLine(mago.WizardsCure(20));
-            Console.WriteLine(enano.DwarvesCure(20));
-            Console.WriteLine(elfo.ElvesCure(20));
-            Console.WriteLine(Gandalf.WizardsCure(20));
-            Console.WriteLine(hp.WizardsCure(20));
+            Console.WriteLine(mago.WizardsCure());
+            Console.WriteLine(enano.DwarvesCure());
+            Console.WriteLine(elfo.ElvesCure());
+            Console.WriteLine(Gandalf.WizardsCure());
+            Console.WriteLine(hp.WizardsCure());
         }
     }
 }
