@@ -28,7 +28,7 @@ namespace Library
         {   
             string name = nameAndLife[1].ToString();
             string newLife = nameAndLife[0].ToString();
-            Console.WriteLine($"El personaje {name} ha sido curado, si vida es {newLife}");
+            Console.WriteLine($"El personaje {name} ha sido curado, su vida es {newLife}");
         }
     }
 }

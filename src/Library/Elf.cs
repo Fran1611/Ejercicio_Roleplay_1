@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Collections;
 namespace Library
 {
-// Por patron EXPERT asignamos las responsabilidades del Ataque y Cura del personaje Elve, ya que este es experto en conocer su valor de vida.
+// Por patron EXPERT asignamos las responsabilidades del Ataque y Cura del personaje Elf, ya que este es experto en conocer su valor de vida.
 
 
-    public class Elve
+    public class Elf
     {
         private int life;
-        public Elve(string name, int life, List<Item> items)
+        public Elf(string name, int life, List<Item> items)
 
         {
             this.Items = items;
@@ -34,7 +34,7 @@ namespace Library
         public List<Item> Items { get; set; }
         
         //El metodo devuelve el nombre del personaje atacado y el valor de su vida luego del ataque.
-        public ArrayList ElveAttack(int otherDamage)
+        public ArrayList ElfAttack(int otherDamage)
         {
             ArrayList result = new ArrayList();
             
@@ -44,8 +44,8 @@ namespace Library
             return result;
         }
         
-        // El metodo DwarvesCure restaura la vida del Elve a su vida inicial, retorna nombre y vida para imprimir.
-        public ArrayList ElveCure()
+        // El metodo DwarvesCure restaura la vida del Elf a su vida inicial, retorna nombre y vida para imprimir.
+        public ArrayList ElfCure()
         {
             ArrayList result = new ArrayList();
             this.Life = InitialLife;

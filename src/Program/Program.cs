@@ -39,7 +39,7 @@ namespace Program
 
             Wizard mago = new Wizard("Mago", 60, artMagia);
             Dwarve enano = new Dwarve("Enano",40,itemsEnano);
-            Elve elfo = new Elve("Elfo",45,itemsElfo);
+            Elf elfo = new Elf("Elfo",45,itemsElfo);
 
             Wizard Gandalf = new Wizard("Gandalf", 100, artMagia);
             
@@ -48,13 +48,13 @@ namespace Program
 
             ConsolePrinter print = new ConsolePrinter();
 
-            print.AfterAttack(elfo.ElveAttack(mago.Items[0].Damage));
+            print.AfterAttack(elfo.ElfAttack(mago.Items[0].Damage));
             print.AfterAttack(mago.WizardAttack(enano.Items[0].Damage));
             print.AfterAttack(enano.DwarveAttack(elfo.Items[0].Damage));
             print.AfterAttack(Gandalf.WizardAttack(elfo.Items[1].Damage));           
             print.AfterAttack(hp.WizardAttack(lv.Items[2].Damage));
 
-            print.AfterCure(elfo.ElveCure());
+            print.AfterCure(elfo.ElfCure());
             
         }
     }
