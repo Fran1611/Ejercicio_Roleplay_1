@@ -4,7 +4,6 @@ namespace Library
 {
     public class Elves
     {
-       
         public Elves(string name, int life, List<Item> items)
 
         {

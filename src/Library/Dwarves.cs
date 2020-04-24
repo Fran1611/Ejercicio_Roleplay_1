@@ -6,10 +6,7 @@ namespace Library
 {
     public class Dwarves
     {
-
-        
-        private int life;
-        
+        private int life;   
         public Dwarves(string name, int life, List<Item> items)
 
         {
@@ -32,7 +29,6 @@ namespace Library
                 }
                 else life = value;
             }
-            
         }
         public List<Item> Items {get;set;}
         

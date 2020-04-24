@@ -6,9 +6,7 @@ namespace Library
     public class Wizards
 
     {
-
         private int life;
-
         public Wizards(string name, int life, List<Item> items)
         {
             this.Items = items;
@@ -52,7 +50,6 @@ namespace Library
         {
             this.Life = InitialLife;
             return $"El Mago ha sido curado, si vida es {this.Life}";
-        }
-        
+        }        
     }
 }

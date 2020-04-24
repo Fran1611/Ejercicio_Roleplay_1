@@ -11,8 +11,6 @@ namespace Program
        
         public static void Main(string[] args)
         {
-
-
             Item espada = new Item("Espada",45,0,null);
             Item baston = new Item("Baston",50,10,null);
             Item garrote = new Item("Garrote",35,0,null);

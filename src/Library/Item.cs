@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 
 namespace Library
-{
-    
+{    
     public class Item
     {
-
         private int damage;
         private int defence; 
         //private string name;
