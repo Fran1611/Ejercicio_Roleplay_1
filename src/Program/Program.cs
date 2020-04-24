@@ -46,6 +46,7 @@ namespace Program
             Wizard hp = new Wizard("Harry Potter", 2, artMagia);
             Wizard lv = new Wizard("Lord Voldemort", 7, artMagia);
 
+            ConsolePrinter print = new ConsolePrinter();
 
             ConsolePrinter print = new ConsolePrinter();
             print.AfterAttack(elfo.ElfAttack(mago.Items[0].Damage));
@@ -55,7 +56,6 @@ namespace Program
             print.AfterAttack(hp.WizardAttack(lv.Items[2].Damage));
             
             print.AfterCure(elfo.ElfCure());
-            
             
         }
     }

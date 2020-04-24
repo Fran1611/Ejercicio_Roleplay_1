@@ -4,6 +4,7 @@ using System.Collections;
 
 namespace Library
 {
+// Por patron EXPERT asignamos las responsabilidades del Ataque y Cura del personaje Wizard, ya que este es experto en conocer su valor de vida.
     public class Wizard
 
     {
@@ -22,7 +23,7 @@ namespace Library
             get{return life;}
             set
             {
-                if(life < 0)
+                if(value < 0)
                 {
                     life = 0;
                 }
