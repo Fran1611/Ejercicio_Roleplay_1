@@ -13,8 +13,26 @@ namespace Library
         public Wizards(string name, int life, List<Item> items)
         {
             this.Items = items;
-            this.Life = life;
+            this.Life = ValidarVida(life);
             this.Name = name;
+        }
+
+        public int ValidarVida(int life)
+        {
+            if (life < 1)
+            {   
+                Console.WriteLine("La minima vida es 1\n");
+                return 1;
+            }else
+            {
+                if (life > 100)
+                {   
+                    Console.WriteLine("La maxima vida es 100\n");
+                    return 100;
+                }
+            }
+
+            return life;
         }
 
         public string Name {get;set;}
@@ -29,7 +47,13 @@ namespace Library
         public string WizardsAttack(int otherDamage)
         {
             this.Life = this.Life + this.Items[0].Defence - otherDamage;
-            return $"El Mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+
+            if (this.Life <= 0)
+            {
+                return $"El mago {this.Name} está muerto\n";
+            }
+
+            return $"El mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
 
         }
         
@@ -39,24 +63,27 @@ namespace Library
         public string WizardsCure(int cure)
         {
             if (cure < 0)
-            {
+            {   
+                cure = 0;
                 return $"La cura no puede ser negativa\n";
             }
 
             if (this.Life <= 0)
-            {
-                return $"El Mago ya está muerto, no se puede curar\n";
+            {   
+                cure = 0;
+                return $"El mago {this.Name} ya está muerto, no se puede curar\n";
             }
             else
             {
                 this.Life = this.Life + cure;
                 if (this.Life >= 100)
-                {
-                    return $"El Mago {this.Name} ya está totalmente curado\n";
+                {   
+                    this.Life = 100;
+                    return $"El mago {this.Name} ya está totalmente curado\n";
                 }
                 else
                 {
-                    return $"El Mago {this.Name} ha sido curado, su vida ahora es {this.Life}\n";
+                    return $"El mago {this.Name} ha sido curado, su vida ahora es {this.Life}\n";
                 }
             }
 

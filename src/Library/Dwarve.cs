@@ -1,5 +1,3 @@
-
-
 using System;
 using System.Collections.Generic;
 namespace Library
@@ -15,10 +13,27 @@ namespace Library
 
         {
             this.Items = items;
-            this.Life = life;
+            this.Life = ValidarVida(life);
             this.Name = name;
         }
 
+        public int ValidarVida(int life)
+        {
+            if (life < 1)
+            {   
+                Console.WriteLine("La minima vida es 1\n");
+                return 1;
+            }else
+            {
+                if (life > 100)
+                {   
+                    Console.WriteLine("La maxima vida es 100\n");
+                    return 100;
+                }
+            }
+
+            return life;
+        }
         
         public string Name {get; set; }
         public int Life {get; set; }
@@ -31,8 +46,14 @@ namespace Library
         
         public string DwarvesAttack(int otherDamage)
         {
-            this.Life = this.Life + this.Items[0].Defence - otherDamage;
-            return $"El Enano {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+           this.Life = this.Life + this.Items[0].Defence - otherDamage;
+
+            if (this.Life <= 0)
+            {
+                return $"El enano {this.Name} está muerto\n";
+            }
+
+            return $"El enano {this.Name} fue atacado, su vida ahora es {this.Life}\n";
 
         }
         
@@ -45,24 +66,27 @@ namespace Library
         public string DwarvesCure(int cure)
         {
             if (cure < 0)
-            {
+            {   
+                cure = 0;
                 return $"La cura no puede ser negativa\n";
             }
 
             if (this.Life <= 0)
-            {
-                return $"El Enano ya está muerto, no se puede curar\n";
+            {   
+                cure = 0;
+                return $"El enano ya está muerto, no se puede curar\n";
             }
             else
             {
                 this.Life = this.Life + cure;
                 if (this.Life >= 100)
-                {
-                    return $"El Enano {this.Name} ya está totalmente curado\n";
+                {   
+                    cure = 100;
+                    return $"El enano {this.Name} ya está totalmente curado\n";
                 }
                 else
                 {
-                    return $"El Enano {this.Name} ha sido curado, su vida ahora es {this.Life}\n";
+                    return $"El enano {this.Name} ha sido curado, su vida ahora es {this.Life}\n";
                 }
             }
 
