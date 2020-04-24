@@ -48,21 +48,25 @@ namespace Program
             Wizards hp = new Wizards("Harry Potter", 2, artMagia);
             Wizards lv = new Wizards("Lord Voldemort", 7, artMagia);
 
-            string firstAttack = elfo.ElvesAttack(mago.Items[0].Damage);   
-            string secondAttack = mago.WizardsAttack(enano.Items[0].Damage);
-            string thirdAttack = enano.DwarvesAttack(elfo.Items[0].Damage);
+            //string firstAttack = elfo.ElvesAttack(mago.Items[0].Damage);   
+            //string secondAttack = mago.WizardsAttack(enano.Items[0].Damage);
+            //string thirdAttack = enano.DwarvesAttack(elfo.Items[0].Damage);
 
             string forthAttack = Gandalf.WizardsAttack(elfo.Items[1].Damage);
             
-            string fifthAttack = hp.WizardsAttack(lv.Items[2].Damage);
+            //string fifthAttack = hp.WizardsAttack(lv.Items[2].Damage);
 
             // mejorar esto
-            Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack)+(forthAttack)+(fifthAttack));
+            //Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack)+(forthAttack)+(fifthAttack));
+            Console.WriteLine(forthAttack);
+            Console.WriteLine(Gandalf.WizardsCure(50));
+            /*
             Console.WriteLine(mago.WizardsCure(20));
             Console.WriteLine(enano.DwarvesCure(20));
             Console.WriteLine(elfo.ElvesCure(20));
-            Console.WriteLine(Gandalf.WizardsCure(20));
+            Console.WriteLine(Gandalf.WizardsCure(90));
             Console.WriteLine(hp.WizardsCure(20));
+            */
         }
     }
 }

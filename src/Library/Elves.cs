@@ -12,9 +12,28 @@ namespace Library
 
         {
             this.Items = items;
-            this.Life = life;
+            this.Life = ValidarVida(life);
             this.Name = name;
         }
+
+         public int ValidarVida(int life)
+        {
+            if (life < 1)
+            {   
+                Console.WriteLine("La minima vida es 1\n");
+                return 1;
+            }else
+            {
+                if (life > 100)
+                {   
+                    Console.WriteLine("La maxima vida es 100\n");
+                    return 100;
+                }
+            }
+
+            return life;
+        }
+
         public string Name { get; set; }
         public int Life { get; set; }
 
@@ -27,6 +46,16 @@ namespace Library
         
         public string ElvesAttack(int otherDamage)
         {
+
+            this.Life = this.Life + this.Items[0].Defence - otherDamage;
+
+            if (this.Life <= 0)
+            {
+                return $"El elfo {this.Name} está muerto\n";
+            }
+
+            return $"El elfo {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+
              if (otherDamage < 0)
             {
                 return $"El Daño no puede ser negativo\n";
@@ -42,6 +71,7 @@ namespace Library
                 return $"El Elfo {this.Name} fue atacado, su vida ahora es {this.Life}\n";
             }
 
+
         }
         
         //En cuanto al metodo de curacion, este funciona muy parecido a Ataque solo que recibe un número de cuarcion. 
@@ -50,24 +80,27 @@ namespace Library
         public string ElvesCure(int cure)
         {
             if (cure < 0)
-            {
+            {   
+                cure = 0;
                 return $"La cura no puede ser negativa";
             }
 
             if (this.Life <= 0)
-            {
-                return $"El Elfo ya está muerto, no se puede curar\n";
+            {   
+                cure = 0;
+                return $"El elfo ya está muerto, no se puede curar\n";
             }
             else
             {
                 this.Life = this.Life + cure;
                 if (this.Life >= 100)
-                {
-                    return $"El Elfo {this.Name} ya está totalmente curado";
+                {   
+                    this.Life = 100;
+                    return $"El elfo {this.Name} ya está totalmente curado";
                 }
                 else
                 {
-                    return $"El Elfo {this.Name} ha sido curado, su vida ahora es {this.Life}";
+                    return $"El elfo {this.Name} ha sido curado, su vida ahora es {this.Life}";
                 }
             }
         }
