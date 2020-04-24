@@ -24,7 +24,7 @@ namespace Library
             get{return life;}
             set
             {
-                if(life < 0)
+                if(value < 0)
                 {
                     life =0;
                 }

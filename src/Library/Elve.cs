@@ -8,6 +8,7 @@ namespace Library
 
     public class Elve
     {
+        private int life;
         public Elve(string name, int life, List<Item> items)
 
         {
@@ -17,7 +18,18 @@ namespace Library
             InitialLife = life;
         }
         public string Name { get; set;}
-        public int Life { get; set;}
+        public int Life 
+        {
+            get{return life;}
+            set
+            {
+                if(value < 0)
+                {
+                    life = 0;
+                }
+                else life = value;
+            }
+        }
         public int InitialLife {get;}
         public List<Item> Items { get; set; }
         

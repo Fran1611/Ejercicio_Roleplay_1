@@ -46,32 +46,16 @@ namespace Program
             Wizard hp = new Wizard("Harry Potter", 2, artMagia);
             Wizard lv = new Wizard("Lord Voldemort", 7, artMagia);
 
+            ConsolePrinter print = new ConsolePrinter();
 
-            // CAMBIAR PARA CADA ATAQUE Y RESTAURACION DE VIDA 
+            print.AfterAttack(elfo.ElveAttack(mago.Items[0].Damage));
+            print.AfterAttack(mago.WizardAttack(enano.Items[0].Damage));
+            print.AfterAttack(enano.DwarveAttack(elfo.Items[0].Damage));
+            print.AfterAttack(Gandalf.WizardAttack(elfo.Items[1].Damage));           
+            print.AfterAttack(hp.WizardAttack(lv.Items[2].Damage));
+
+            print.AfterCure(elfo.ElveCure());
             
-            // QUEDARIA ASI ImprimirAtaque(elfo.ElveAttack(Mago.Items[0].Damage));
-
-            // ImprimirCura (elfo.ElveCure());
-
-            // ESTO SE VA
-            /*string firstAttack = elfo.ElveAttack(mago.Items[0].Damage);   
-            string secondAttack = mago.WizardAttack(enano.Items[0].Damage);
-            string thirdAttack = enano.DwarveAttack(elfo.Items[0].Damage);
-
-
-            string forthAttack = Gandalf.WizardAttack(elfo.Items[1].Damage);
-            
-            string fifthAttack = hp.WizardAttack(lv.Items[2].Damage);
-
-            // mejorar esto
-            Console.WriteLine((firstAttack)+(secondAttack)+(thirdAttack)+(forthAttack)+(fifthAttack));
-
-            Console.WriteLine(mago.WizardCure());
-            Console.WriteLine(enano.DwarveCure());
-            Console.WriteLine(elfo.ElveCure());
-            Console.WriteLine(Gandalf.WizardCure());
-            Console.WriteLine(hp.WizardCure());*/
-
         }
     }
 }
