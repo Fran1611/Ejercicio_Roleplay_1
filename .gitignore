@@ -1,4 +1,5 @@
 
-Obj\
-Bin\
+obj\
+bin\
+Debug\
 .vscode\
