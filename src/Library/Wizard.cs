@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace Library
 {
@@ -31,25 +32,26 @@ namespace Library
         public List<Item> Items {get;set;}
         public int InitialLife {get;}
         
-        //El metodo Ataque, usa un numero que se refiere al daño que un personaje le causa a otro. Este numero se encuentra en una lista
-        //de objetos de clase Item, se accede al objeto y se busca el atributo correspondiente al metodo, en este caso Daño.
-        //Al calculo de la nueva vida luego de un ataque se le debe sumar la posible defensa que el objeto pueda estar usando. Tambien
-        //accediendo al objeto de la lista. Retornara una actualizacion de la nueva vida.
-
-        public string WizardAttack(int otherDamage)
+        //El metodo devuelve el nombre del personaje atacado y el valor de su vida luego del ataque.
+        
+        public ArrayList WizardAttack(int otherDamage)
         {
-            if (this.Life <= 0)
-            {
-                return $"El Mago {this.Name} fue atacado y ahora está muerto\n";
-            }
-            else return $"El Mago {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+            ArrayList result = new ArrayList();
+            
+            this.Life = this.Life - otherDamage;
+            result.Add(this.Name);
+            result.Add(this.Life);
+            return result;
         }
         
-        // El metodo WizardsCure restaura la vida del Elve a su vida inicial.
-        public string WizardCure()
+        // El metodo DwarvesCure restaura la vida del Elve a su vida inicial, retorna nombre y vida para imprimir.
+        public ArrayList WizardCure()
         {
+            ArrayList result = new ArrayList();
             this.Life = InitialLife;
-            return $"El Mago ha sido curado, su vida es {this.Life}";
+            result.Add(this.Life);
+            result.Add(this.Name);
+            return result;
         }        
     }
 }

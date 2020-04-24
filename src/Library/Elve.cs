@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 namespace Library
 {
     public class Elve
@@ -17,29 +18,26 @@ namespace Library
         public int InitialLife {get;}
         public List<Item> Items { get; set; }
         
-        //El metodo ataque recibe un numero que corresponde al daño que un personaje le da a otro. Este numero se obtiene de una lista
-        //de objetos de clase Item, se accede a un objeto y se busca su atributo en este caso Daño.
-        //Luego se calcula una nueva vida considerando que el personaje puede tener un elemento que lo proteja el cual se suma a su vida
-        //y todo esto se resta al daño. Retornara una actualizacion de la vida del personaje.
+                //El metodo devuelve el nombre del personaje atacado y el valor de su vida luego del ataque.
         
-        public string ElveAttack(int otherDamage)
+        public ArrayList ElveAttack(int otherDamage)
         {
-            this.Life = (this.Life - otherDamage);
-            if (this.Life <= 0)
-            {
-                return $"El Elfo {this.Name} fue atacado y ahora está muerto\n";
-            }
-            else
-            {
-                return $"El Elfo {this.Name} fue atacado, su vida ahora es {this.Life}\n";
-            }
+            ArrayList result = new ArrayList();
+            
+            this.Life = this.Life - otherDamage;
+            result.Add(this.Name);
+            result.Add(this.Life);
+            return result;
         }
         
-        // El metodo ElvesCure restaura la vida del Elve a su vida inicial.
-        public string ElveCure()
+        // El metodo DwarvesCure restaura la vida del Elve a su vida inicial, retorna nombre y vida para imprimir.
+        public ArrayList ElveCure()
         {
+            ArrayList result = new ArrayList();
             this.Life = InitialLife;
-            return $"El Elfo ha sido curado, su vida es {this.Life}";
+            result.Add(this.Life);
+            result.Add(this.Name);
+            return result;
         }
     }
 }

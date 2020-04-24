@@ -1,7 +1,7 @@
 
-
 using System;
 using System.Collections.Generic;
+using System.Collections;
 namespace Library
 {
     public class Dwarve
@@ -32,25 +32,26 @@ namespace Library
         }
         public List<Item> Items {get;set;}
         
-        //Este metodo Ataque se le pasa un numero que representa un daño que le ocasiona un personaje al otro.
-        //Se obtiene de una lista de objetos de la clase Item y se busca el atributo en este caso Daño.
-        //Luego se recalcula una nueva vida luego del ataque considerando que ese personaje puede tener un elemento de proteccion y
-        //retorna una actualizacion de su nueva vida.
+        //El metodo devuelve el nombre del personaje atacado y el valor de su vida luego del ataque.
         
-        public string DwarveAttack(int otherDamage)
+        public ArrayList  DwarveAttack(int otherDamage)
         {
-            if (this.Life <= 0)
-            {
-                return $"El Enano {this.Name} fue atacado y ahora está muerto\n";
-            }
-            else return $"El Enano {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+            ArrayList result = new ArrayList();
+            
+            this.Life = this.Life - otherDamage;
+            result.Add(this.Name);
+            result.Add(this.Life);
+            return result;
         }
         
-        // El metodo DwarvesCure restaura la vida del Elve a su vida inicial.
-        public string DwarveCure()
+        // El metodo DwarvesCure restaura la vida del Elve a su vida inicial, retorna nombre y vida para imprimir.
+        public ArrayList DwarveCure()
         {
+            ArrayList result = new ArrayList();
             this.Life = InitialLife;
-            return $"El Enano ha sido curado, su vida es {this.Life}";
+            result.Add(this.Life);
+            result.Add(this.Name);
+            return result;
         }
     }
 }
