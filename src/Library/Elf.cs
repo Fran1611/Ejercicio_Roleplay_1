@@ -30,7 +30,7 @@ namespace Library
             return result;
         }
         
-        // El metodo DwarvesCure restaura la vida del Elf a su vida inicial, retorna nombre y vida para imprimir.
+        // El metodo ElfCure restaura la vida del Elf a su vida inicial, retorna nombre y vida para imprimir.
         public ArrayList ElfCure()
         {
             ArrayList result = new ArrayList();
