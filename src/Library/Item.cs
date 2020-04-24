@@ -6,10 +6,6 @@ namespace Library
     
     public class Item
     {
-
-        private int damage;
-        private int defence; 
-        private string name;
         private List<string> spells;
 
         public Item (string name, int damage, int defence, List<string> spells)

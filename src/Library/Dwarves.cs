@@ -2,22 +2,18 @@ using System;
 using System.Collections.Generic;
 namespace Library
 {
-    public class Dwarves
+    public class Dwarf
     {
 
-        private string name;
-        private int life;
-        private List<Item> items;
-
-        public Dwarves(string name, int life, List<Item> items)
+        public Dwarf(string name, int life, List<Item> items)
 
         {
             this.Items = items;
-            this.Life = ValidarVida(life);
+            this.Life = ValidateLife(life);
             this.Name = name;
         }
 
-        public int ValidarVida(int life)
+        public int ValidateLife(int life)
         {
             if (life < 1)
             {   
@@ -44,30 +40,24 @@ namespace Library
         //Luego se recalcula una nueva vida luego del ataque considerando que ese personaje puede tener un elemento de proteccion y
         //retorna una actualizacion de su nueva vida.
         
-        public string DwarvesAttack(int otherDamage)
+        public string DwarfAttack(int otherDamage)
         {
 
            this.Life = this.Life + this.Items[0].Defence - otherDamage;
 
             if (this.Life <= 0)
             {
-                return $"El enano {this.Name} está muerto\n";
+                return $"El enano {this.Name} fue atacado y está muerto\n";
             }
-
-            return $"El enano {this.Name} fue atacado, su vida ahora es {this.Life}\n";
 
             if (otherDamage < 0)
             {
-                return $"El Daño no puede ser negativo\n";
+                return $"El daño no puede ser negativo\n";
             }
 
-            if (this.Life <= 0)
-            {
-                return $"El Enano {this.Name} fue atacado y ahora está muerto\n";
-            }
             else
             {
-                return $"El Enano {this.Name} fue atacado, su vida ahora es {this.Life}\n";
+                return $"El enano {this.Name} fue atacado, su vida ahora es {this.Life}\n";
             }
 
 
@@ -79,7 +69,7 @@ namespace Library
 
 
 
-        public string DwarvesCure(int cure)
+        public string DwarfCure(int cure)
         {
             if (cure < 0)
             {   
