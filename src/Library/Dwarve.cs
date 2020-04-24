@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 namespace Library
 {
-    public class Dwarves
+    public class Dwarve
     {
         private int life;   
-        public Dwarves(string name, int life, List<Item> items)
+        public Dwarve(string name, int life, List<Item> items)
 
         {
             this.Items = items;
@@ -37,7 +37,7 @@ namespace Library
         //Luego se recalcula una nueva vida luego del ataque considerando que ese personaje puede tener un elemento de proteccion y
         //retorna una actualizacion de su nueva vida.
         
-        public string DwarvesAttack(int otherDamage)
+        public string DwarveAttack(int otherDamage)
         {
             if (this.Life <= 0)
             {
@@ -47,10 +47,10 @@ namespace Library
         }
         
         // El metodo DwarvesCure restaura la vida del Elve a su vida inicial.
-        public string DwarvesCure()
+        public string DwarveCure()
         {
             this.Life = InitialLife;
-            return $"El Enano ha sido curado, si vida es {this.Life}";
+            return $"El Enano ha sido curado, su vida es {this.Life}";
         }
     }
 }

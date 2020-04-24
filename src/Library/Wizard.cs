@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Wizards
+    public class Wizard
 
     {
         private int life;
-        public Wizards(string name, int life, List<Item> items)
+        public Wizard(string name, int life, List<Item> items)
         {
             this.Items = items;
             this.Life = life;
@@ -36,7 +36,7 @@ namespace Library
         //Al calculo de la nueva vida luego de un ataque se le debe sumar la posible defensa que el objeto pueda estar usando. Tambien
         //accediendo al objeto de la lista. Retornara una actualizacion de la nueva vida.
 
-        public string WizardsAttack(int otherDamage)
+        public string WizardAttack(int otherDamage)
         {
             if (this.Life <= 0)
             {
@@ -46,10 +46,10 @@ namespace Library
         }
         
         // El metodo WizardsCure restaura la vida del Elve a su vida inicial.
-        public string WizardsCure()
+        public string WizardCure()
         {
             this.Life = InitialLife;
-            return $"El Mago ha sido curado, si vida es {this.Life}";
+            return $"El Mago ha sido curado, su vida es {this.Life}";
         }        
     }
 }
